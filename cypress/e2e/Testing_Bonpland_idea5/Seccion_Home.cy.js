@@ -26,7 +26,7 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
 
     });
 
-    it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
+    it.only('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
       // Prueba de los Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
       // Prueba de los Endpoints en Inmuebles en la tabla "Id para inmuebles","Id para Img","Precio","Direccion","Ciudad","Pais","Tamñano Inmueble","Ambientes","Estado (REservado/Alquilado/Vendido),"Codigo de Zona","Fecha Publicacion","Tipo de Inmueble" 
       // Pruebas GET y POST
@@ -122,8 +122,15 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
       // Filtramos por Mts2 Min / Max y validando que se sean 
     });
 
-    it('B_002 Filtro de Busqueda | Button Submit', () => {
-      home.checkBtnFilter1('Button Submit') // Se Espera: Un button para confirmar datos ingresados en Filtro 
+    it('B_002 Filtro de Busqueda | Button Submit y Clear', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"
+      home.search('Argentina')
+      home.checkBtnFilter1('Button Submit y Button Clear') // Se Espera: Un button para confirmar y limpiar datos ingresados en Filtro 
+
+    });
+
+    it.only('B_003 Filtro de Busqueda | Inputs Mts2', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"
+      home.search('Argentina')
+      home.inputsMts2(1) // Se Espera: Un button para confirmar y limpiar datos ingresados en Filtro 
 
     });
 
